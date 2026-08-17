@@ -1,0 +1,125 @@
+/* --------------------------------------------------
+   1. RESET BÁSICO Y VARIABLES (Buenas Prácticas)
+-------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Evita que el padding altere el ancho total */
+}
+
+:root {
+    --primary-color: #002b49;    /* Azul institucional */
+    --accent-color: #ffc629;     /* Amarillo de acento */
+    --text-color: #333333;       /* Texto oscuro legible */
+    --bg-color: #f4f6f9;         /* Fondo suave */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --------------------------------------------------
+   2. ESTILOS GENERALES Y TIPOGRAFÍA
+-------------------------------------------------- */
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Encabezados */
+h1, h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* --------------------------------------------------
+   3. SECCIONES Y CONTENEDORES
+-------------------------------------------------- */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: var(--accent-color);
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto; /* Centra el contenido en pantallas grandes */
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* --------------------------------------------------
+   4. ESTILOS DE FORMULARIO
+-------------------------------------------------- */
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 43, 73, 0.3);
+}
+
+button {
+    margin-top: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #004070;
+}
+
+/* --------------------------------------------------
+   5. CONTENIDO 2.3: MEDIA QUERIES (Diseño Adaptable/Responsive)
+-------------------------------------------------- */
+/* Adaptación para pantallas móviles (Smartphones) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    button {
+        width: 100%; /* Botón de ancho completo en celular */
+    }
+}
